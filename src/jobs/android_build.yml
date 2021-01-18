@@ -37,6 +37,10 @@ parameters:
     description: A custom command to run right after yarn install.
     type: string
     default: ""
+  build_command:
+    description: Custom build command
+    type: string
+    default: ""
 
 steps:
   - when:
@@ -58,6 +62,7 @@ steps:
   - android_build:
       project_path: <<parameters.project_path>>
       build_type: <<parameters.build_type>>
+      build_command: <<parameters.build_command>>
   - when:
       condition: <<parameters.persist_to_workspace>>
       steps:
