@@ -12,5 +12,4 @@ docker:
 resource_class: <<parameters.resource_class>>
 environment:
   - PATH: '/opt/yarn/yarn-v1.5.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
-  - LC_ALL: en_US.UTF-8
   - LANG: en_US.UTF-8
