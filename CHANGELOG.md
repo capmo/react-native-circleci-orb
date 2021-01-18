@@ -1,3 +1,10 @@
+## [4.5.2](https://github.com/capmo/react-native-circleci-orb/compare/v4.5.1...v4.5.2) (2021-01-18)
+
+
+### Bug Fixes
+
+* edit build config [skip-ci] ([2ffb41d](https://github.com/capmo/react-native-circleci-orb/commit/2ffb41d))
+
 ## [4.5.1](https://github.com/capmo/react-native-circleci-orb/compare/v4.5.0...v4.5.1) (2021-01-18)
 
 
