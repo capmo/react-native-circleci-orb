@@ -1,3 +1,10 @@
+## [4.6.1](https://github.com/capmo/react-native-circleci-orb/compare/v4.6.0...v4.6.1) (2021-01-18)
+
+
+### Bug Fixes
+
+* remove unneeded local env ([99ec51a](https://github.com/capmo/react-native-circleci-orb/commit/99ec51a))
+
 # [4.6.0](https://github.com/capmo/react-native-circleci-orb/compare/v4.5.2...v4.6.0) (2021-01-18)
 
 
