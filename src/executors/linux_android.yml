@@ -17,3 +17,5 @@ resource_class: <<parameters.resource_class>>
 environment:
   - _JAVA_OPTIONS: <<parameters.java_options>>
   - GRADLE_OPTS: <<parameters.gradle_options>>
+  - LC_ALL: en_US.UTF-8
+  - LANG: en_US.UTF-8
