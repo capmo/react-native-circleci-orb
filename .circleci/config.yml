@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  cli: circleci/circleci-cli@0.1.2
+  cli: circleci/circleci-cli@0.1.8
   orb-tools: circleci/orb-tools@2
 
 jobs:
@@ -49,7 +49,9 @@ jobs:
             echo 'github.com ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==' >> ~/.ssh/known_hosts
       - run:
           name: Publish to CircleCI Orb Registry
-          command: yarn semantic-release
+          command: |
+            cat package.json
+            yarn semantic-release
 
 workflows:
   btd:
@@ -58,7 +60,7 @@ workflows:
 
       - orb-tools/publish:
           orb-path: packed-orb.yml
-          orb-ref: "react-native-community/react-native@dev:${CIRCLE_BRANCH}"
+          orb-ref: "capmo/react-native@dev:${CIRCLE_BRANCH}"
           publish-token-variable: CIRCLECI_API_TOKEN
           attach-workspace: true
           checkout: false

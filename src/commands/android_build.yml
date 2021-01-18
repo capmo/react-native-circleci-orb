@@ -9,6 +9,11 @@ parameters:
     description: The build type to build. This is normally either "debug" or "release" but you may have custom build types configured for your app.
     type: string
     default: "debug"
+  build_command:
+    description: Custom build command
+    type: string
+    default: "cd <<parameters.project_path>> && chmod +x gradlew && ./gradlew --build-cache --max-workers 2 --continue assemble<<parameters.build_type>> assembleAndroidTest -DtestBuildType=<<parameters.build_type>> --stacktrace"
+
 
 steps:
   - run:
@@ -59,7 +64,7 @@ steps:
 
   - run:
       name: Build Android APK
-      command: "cd <<parameters.project_path>> && chmod +x gradlew && ./gradlew --build-cache --max-workers 2 --continue assemble<<parameters.build_type>> assembleAndroidTest -DtestBuildType=<<parameters.build_type>> --stacktrace"
+      command: <<parameters.build_command>>
 
   - run:
       name: Collecting Gradle Build caches for saving
