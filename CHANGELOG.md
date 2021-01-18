@@ -1,3 +1,10 @@
+## [4.5.1](https://github.com/capmo/react-native-circleci-orb/compare/v4.5.0...v4.5.1) (2021-01-18)
+
+
+### Bug Fixes
+
+* add build_type to android_build job ([a77d81f](https://github.com/capmo/react-native-circleci-orb/commit/a77d81f))
+
 # [4.5.0](https://github.com/capmo/react-native-circleci-orb/compare/v4.4.2...v4.5.0) (2021-01-18)
 
 
